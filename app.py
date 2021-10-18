@@ -36,18 +36,18 @@ def m404():
 def m500():
     return render_template('500.html')
 
-# connection sql
-@app.route("/data")
-def data():
-    connection  = engine.connect() # connection 要放在view function中，否則會出現thread error
-    query = db.select(func.count()).select_from(table_0050)
-    proxy = connection.execute(query)
+# # connection sql
+# @app.route("/data")
+# def data():
+#     connection  = engine.connect() # connection 要放在view function中，否則會出現thread error
+#     query = db.select(func.count()).select_from(table_0050)
+#     proxy = connection.execute(query)
 
-    # Close connection
-    connection.close()
+#     # Close connection
+#     connection.close()
 
 
-     return render_template('data.html')
+#      return render_template('data.html')
 
 
 
